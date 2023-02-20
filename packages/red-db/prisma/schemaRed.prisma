@@ -1,0 +1,14 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../client/prisma-client"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = "mysql://root@127.0.0.1:3306/red"
+}
+
+model Red {
+  id   String @id @default(cuid())
+  name String
+}

@@ -1,0 +1,14 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../client/prisma-client"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = "mongodb://root:example@localhost:27017/blue?authSource=admin"
+}
+
+model Blue {
+  id   String @id @default(auto()) @map("_id") @db.ObjectId
+  name String
+}

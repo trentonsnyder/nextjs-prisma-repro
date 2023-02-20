@@ -1,0 +1,19 @@
+{
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[prisma]": {
+    "editor.defaultFormatter": "Prisma.prisma"
+  },
+  "editor.tabSize": 2,
+  "git.mergeEditor": false,
+  "eslint.workingDirectories": [
+    "./apps/web",
+    "./packages/red-db",
+    "./packages/blue-db",
+    "./packages/config",
+    "./packages/ts-config"
+  ],
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
+}
