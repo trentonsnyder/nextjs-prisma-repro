@@ -4,7 +4,7 @@ I think the issue is when you import the prisma db functions into both `/api` an
 
 `next dev` always works, you can see `.next/server/pages/schema.prisma1` shows up.
 
-but the folder structure after `yarn builld`, which invokes `next build`, is incorrect. Locally inspecting the `.next/` folder I can see that `schema1` isn't copied to all the places that next is expecting it.
+but the folder structure after `yarn builld`, which invokes `next build`, is incorrect. Locally inspecting the `.next/` folder I can see that `schema.prisma1` isn't copied to all the places that next is expecting it. In the case of this repo it'll be added to `.next/server/pages` and the path to the file will be referenced in `.next/pages/api/rangers.js.nft.json` but when the api route is invoked to will actually look for the schema file in `.next/pages/api/schema.prisma1`
 
 ```
 ENOENT: no such file or directory, open '/Users/trenton/Desktop/nextjs-prisma-repro/apps/web/.next/server/pages/api/schema.prisma1'
